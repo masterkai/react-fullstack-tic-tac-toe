@@ -1,0 +1,34 @@
+body {
+    background-color: #192A32;
+    color: #A7BFC9;
+}
+
+table {
+    /*border-collapse: collapse;*/
+    border-spacing: 20px;
+}
+
+td {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    background-color: #1E353F;
+    border-radius: 12px;
+    box-shadow: 0 8px 0 #11202B;
+}
+
+.empty-cell {
+    cursor: pointer;
+}
+
+.empty-cell:hover {
+    background-color: #eee;
+}
+
+.content-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
