@@ -1,9 +1,9 @@
-import http from 'http';
-import {Server} from 'socket.io'
+import http from "http";
+import { Server } from "socket.io";
 import getNextGameState from "./getNextGameState.js";
-import {CATS_GAME, PLAYER_O_WINS, PLAYER_X_WINS, RUNNING} from "./const.js";
+import { CATS_GAME, PLAYER_O_WINS, PLAYER_X_WINS, RUNNING } from "./const.js";
 import express from "express";
-import {fileURLToPath} from "url"
+import { fileURLToPath } from "url";
 import * as path from "path";
 
 const __filename = fileURLToPath(import.meta.url)
@@ -112,6 +112,9 @@ io.on('connection', socket => {
         }
     })
 })
-server.listen(8080, () => {
-    console.log('Server is listening on port 8080')
+
+const PORT = process.env.PORT || 8080
+
+server.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`)
 })
