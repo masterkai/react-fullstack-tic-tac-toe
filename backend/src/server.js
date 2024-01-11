@@ -101,14 +101,20 @@ io.on('connection', socket => {
         if (nextGameState === PLAYER_O_WINS) {
             playerOSocket.emit('win')
             playerXSocket.emit('lose')
+            playerOMoves = getStartingMatrix()
+            playerXMoves = getStartingMatrix()
         }
         if (nextGameState === PLAYER_X_WINS) {
             playerXSocket.emit('win')
             playerOSocket.emit('lose')
+            playerOMoves = getStartingMatrix()
+            playerXMoves = getStartingMatrix()
         }
         if (nextGameState === CATS_GAME) {
             playerXSocket.emit('tie')
             playerOSocket.emit('tie')
+            playerOMoves = getStartingMatrix()
+            playerXMoves = getStartingMatrix()
         }
     })
 })
