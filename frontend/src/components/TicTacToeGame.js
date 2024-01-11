@@ -42,7 +42,8 @@ const TicTacToeGame = () => {
   };
 
   useEffect(() => {
-    let newSocket = socketIoClient("https://spontaneous-madeleine-cdd52c.netlify.app/");
+    const serverUrl = process.env.NODE_ENV === "development" ?"http://127.0.0.1:8080":"https://spontaneous-madeleine-cdd52c.netlify.app/"
+    let newSocket = socketIoClient(serverUrl);
     setSocket(newSocket);
     newSocket.on("info", (data) => {
       console.log(data);
