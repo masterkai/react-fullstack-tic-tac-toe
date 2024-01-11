@@ -78,6 +78,7 @@ const TicTacToeGame = () => {
     return () => {
       newSocket.disconnect();
     };
+    // eslint-disable-next-line
   }, []);
 
   if (playerIsWaiting) return <h1>waiting for another player to join...</h1>;
