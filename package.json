@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/masterkai/react-fullstack-tic-tac-toe#readme",
   "engines": {
-    "node": "18.x"
+    "node": "18.12.1"
   }
 }
