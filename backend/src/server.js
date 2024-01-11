@@ -9,9 +9,9 @@ import * as path from "path";
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const expressApp = express();
-expressApp.use(express.static(path.join(__dirname, '../../frontend/build')))
+expressApp.use(express.static(path.join(__dirname, '../../front-end/build')))
 expressApp.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/build/index.html'))
+    res.sendFile(path.join(__dirname, '../../front-end/build/index.html'))
 })
 const server = http.createServer(expressApp)
 const io = new Server(server, {
