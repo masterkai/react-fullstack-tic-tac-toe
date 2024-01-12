@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useImmer } from "use-immer";
 import TicTacToeBoard from "./TicTacToeBoard";
 import { CircleIcon, XIcon } from "../Icons";
-import { Box, Paper, Stack, styled } from "@mui/material";
+import { Box, Paper, Stack, styled, Typography } from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import IconButton from "@mui/material/IconButton";
 import socketIoClient from "socket.io-client";
@@ -81,7 +81,7 @@ const TicTacToeGame = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (playerIsWaiting) return <h1>waiting for another player to join...</h1>;
+  if (playerIsWaiting) return <Typography align={"center"} variant={"h5"}>waiting for another player to join...</Typography>;
   // if (currentGameState === PLAYER_X_WINS) return <h1>PLAYER X WINS</h1>;
   // if (currentGameState === PLAYER_O_WINS) return <h1>PLAYER O WINS</h1>;
   // if (currentGameState === CATS_GAME) return <h1>Cats' game!! Nobody wins!</h1>;
